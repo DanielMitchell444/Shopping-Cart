@@ -7,6 +7,7 @@ import Shopping from './Component/Shopping';
 import Cart from './Component/Cart';
 
 function App() {
+  
   return (
    
     <div className="App">
@@ -14,7 +15,8 @@ function App() {
       <Nav />
       <Routes>
        <Route exact path = "/"  element = {<Home />} />
-       <Route exact path = '/shopping' element = {<Shopping />} />
+       <Route exact path = '/shopping' element = {<Shopping 
+       />} />
        <Route exact path = "/cart" element ={<Cart />} />
       </Routes>
      </Router>

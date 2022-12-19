@@ -2,12 +2,12 @@ import React from "react";
 import Card from "./Card";
 import Shopping from "./Shopping";
 
-const Cart = (props) => {
+const Cart = ({item}) => {
  return(
  <div>
-   <Card 
-   onClick = {props.onClick}
-   />
+  <Card 
+  item = {item}
+  />
  </div>
  )
 }

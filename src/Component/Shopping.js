@@ -3,10 +3,11 @@ import data from '../Component/data'
 import Card from "./Card";
 import styles from "../App.module.css";
 import Cart from "./Cart";
-let array = []
+let items = []
 const Shopping = () => {
 
   const [cardArray, setCardArray] = useState(data);
+  const [cart, setCart] = useState([]);
 
   const addItem = (e) => {
    
@@ -18,9 +19,11 @@ const Shopping = () => {
 
     if(newArray){
       console.log('this works btw');
-      array.push(newArray);
-      setCardArray(array)
-      console.log(array);
+      items.push(newArray);
+      setCardArray(newArray);
+
+      console.log(setCardArray)
+      console.log(items);
     }
     
   }
@@ -32,11 +35,12 @@ const Shopping = () => {
       {data.map((card) => {
        return <Card
        title = {card.name}
+       item = {items}
        key = {card.id}
        image = {card.image}
        price = {card.price}
        id = {card.id}
-       value = {array}
+       value = {items}
        data-value = {card.id}
        onClick = {(e) => addItem(e)}
        />
