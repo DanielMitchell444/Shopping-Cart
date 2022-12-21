@@ -2,12 +2,10 @@ import React from "react";
 import Card from "./Card";
 import Shopping from "./Shopping";
 
-const Cart = ({item}) => {
+const Cart = ({items}) => {
  return(
  <div>
-  <Card 
-  item = {item}
-  />
+
  </div>
  )
 }

@@ -35,7 +35,7 @@ const Shopping = () => {
       {data.map((card) => {
        return <Card
        title = {card.name}
-       item = {items}
+       items = {items}
        key = {card.id}
        image = {card.image}
        price = {card.price}
