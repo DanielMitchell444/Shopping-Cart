@@ -5,7 +5,7 @@ import Shopping from "./Shopping";
 const Cart = ({items}) => {
  return(
  <div>
-
+  
  </div>
  )
 }

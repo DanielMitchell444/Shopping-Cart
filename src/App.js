@@ -6,7 +6,7 @@ import Home from './Component/Home';
 import Shopping from './Component/Shopping';
 import Cart from './Component/Cart';
 
-function App() {
+function App({items}) {
   
   return (
    
@@ -17,7 +17,9 @@ function App() {
        <Route exact path = "/"  element = {<Home />} />
        <Route exact path = '/shopping' element = {<Shopping 
        />} />
-       <Route exact path = "/cart" element ={<Cart />} />
+       <Route exact path = "/cart" element ={<Cart
+       items = {items}
+       />} />
       </Routes>
      </Router>
      </div>
