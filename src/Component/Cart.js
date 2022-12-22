@@ -7,7 +7,7 @@ const Cart = ({items}) => {
  <div>
   {items.map(item => {
   return <Card 
-  items = {item}
+  items = {items}
   />  
   })}
  </div>

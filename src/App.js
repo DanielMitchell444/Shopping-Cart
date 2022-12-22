@@ -11,9 +11,8 @@ import Cart from './Component/Cart';
 function App() {
   
   
-  let items = [];
   const [cardArray, setCardArray] = useState(data);
-  const [cart, setCart] = useState(items);
+  const [cart, setCart] = useState([]);
 
   const addItem = (e) => {
     
@@ -27,13 +26,10 @@ function App() {
 
     if(newArray){
       console.log('this works btw');
-      items.push(newArray);
        
-      console.log(items);
       setCart(newArray);
 
       console.log(setCardArray)
-      console.log(items);
     }
     
   }
@@ -52,7 +48,7 @@ function App() {
        items = {setCart}
        />} />
        <Route exact path = "/cart" element ={<Cart
-       items = {items}
+       items = {setCart}
        onClick = {(e) => addItem(e)}
        />} />
       </Routes>
