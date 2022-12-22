@@ -3,31 +3,10 @@ import data from '../Component/data'
 import Card from "./Card";
 import styles from "../App.module.css";
 import Cart from "./Cart";
+import App from "../App";
+import { json } from "react-router-dom";
 let items = []
-const Shopping = () => {
-
-  const [cardArray, setCardArray] = useState(data);
-  const [cart, setCart] = useState([]);
-
-  const addItem = (e) => {
-   
-    let value = e.target.dataset.value;
-
- 
-
-    let newArray = data.find(index => index.id === value);
-
-    if(newArray){
-      console.log('this works btw');
-      items.push(newArray);
-      setCardArray(newArray);
-
-      console.log(setCardArray)
-      console.log(items);
-    }
-    
-  }
-  
+const Shopping = (props) => {
 
     return(
     <div className= {styles.content3}>
@@ -35,16 +14,14 @@ const Shopping = () => {
       {data.map((card) => {
        return <Card
        title = {card.name}
-       items = {setCardArray}
        key = {card.id}
        image = {card.image}
        price = {card.price}
        id = {card.id}
-       value = {items}
        data-value = {card.id}
-       onClick = {(e) => addItem(e)}
+       onClick = {props.onClick}
        />
-      })}  
+      })}
     </div>
     </div>
     )
