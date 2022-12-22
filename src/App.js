@@ -49,7 +49,7 @@ function App() {
        <Route exact path = "/"  element = {<Home />} />
        <Route exact path = '/shopping' element = {<Shopping 
        onClick = {(e) => addItem(e)} 
-       items = {items.name}
+       items = {setCart}
        />} />
        <Route exact path = "/cart" element ={<Cart
        items = {items}

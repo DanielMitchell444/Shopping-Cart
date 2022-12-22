@@ -5,8 +5,11 @@ import Shopping from "./Shopping";
 const Cart = ({items}) => {
  return(
  <div>
-  <h2>{JSON.stringify(items)}</h2>
-  <h3>{items.name}</h3>
+  {items.map(item => {
+  return <Card 
+  items = {item}
+  />  
+  })}
  </div>
  )
 }
