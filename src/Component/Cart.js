@@ -1,15 +1,16 @@
 import React from "react";
+import { json } from "react-router-dom";
 import Card from "./Card";
 import Shopping from "./Shopping";
 
-const Cart = ({items}) => {
+const Cart = (props) => {
  return(
  <div>
-  {items.map(item => {
-  return <Card 
-  items = {items}
-  />  
-  })}
+   {Object.entries(props.items).map(items => {
+    return <Card 
+    title = {items}
+    />
+   })}  
  </div>
  )
 }

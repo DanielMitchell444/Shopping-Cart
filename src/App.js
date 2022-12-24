@@ -21,7 +21,9 @@ function App() {
 
  
 
-    let newArray = data.find(index => index.id === value);
+    let newArray = data.find((index => index.id === value));
+
+    console.log(newArray)
 
 
     if(newArray){
@@ -45,10 +47,10 @@ function App() {
        <Route exact path = "/"  element = {<Home />} />
        <Route exact path = '/shopping' element = {<Shopping 
        onClick = {(e) => addItem(e)} 
-       items = {setCart}
+       items = {cart}
        />} />
        <Route exact path = "/cart" element ={<Cart
-       items = {setCart}
+       items = {cart}
        onClick = {(e) => addItem(e)}
        />} />
       </Routes>
