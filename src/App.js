@@ -19,19 +19,18 @@ function App() {
 
     let value = e.target.dataset.value;
 
- 
+    let list = [...cart];
 
-    let newArray = data.find((index => index.id === value));
+    let newArray = cart.filter((index => index.id === value));
 
-    console.log(newArray)
 
 
     if(newArray){
       console.log('this works btw');
-       
-      setCart(newArray);
 
-      console.log(setCardArray)
+     setCart([...cart, newArray])
+
+      console.log(setCart)
     }
     
   }

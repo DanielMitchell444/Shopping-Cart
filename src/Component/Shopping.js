@@ -19,6 +19,7 @@ const Shopping = (props) => {
        price = {card.price}
        id = {card.id}
        data-value = {card.id}
+       card = {card}
        onClick = {props.onClick}
        />
       })}

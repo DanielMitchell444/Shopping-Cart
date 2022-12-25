@@ -3,14 +3,14 @@ import { json } from "react-router-dom";
 import Card from "./Card";
 import Shopping from "./Shopping";
 
-const Cart = (props) => {
+const Cart = ({items}) => {
  return(
  <div>
-   {Object.entries(props.items).map(items => {
-    return <Card 
-    title = {items}
-    />
-   })}  
+    {items.map(item => {
+     return <Card 
+     item = {item}
+     />
+    })}  
  </div>
  )
 }
