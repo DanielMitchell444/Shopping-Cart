@@ -8,7 +8,7 @@ const Cart = (props) => {
  <div>
     {props.items.map(item => {
      return <Card 
-     items = {item}
+     item = {item.name}
      />
     })}  
  </div>

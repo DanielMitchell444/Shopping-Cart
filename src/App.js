@@ -15,21 +15,20 @@ function App() {
   const [cardArray, setCardArray] = useState(data);
   const [cart, setCart] = useState([]);
 
-  const addItem = (e) => {
+  const addItem = (product) => {
     
-
-    let value = e.target.dataset.value;
 
     let list = [...cart];
 
-    let newArray = cart.filter((index => index.id === value));
+    let newArray = data.findIndex((index => index.id === product.id));
 
 
 
     if(newArray){
       console.log('this works btw');
 
-     setCart([...cart, newArray])
+
+     setCart([...cart, product])
 
       console.log(setCart)
     }
@@ -46,12 +45,12 @@ function App() {
       <Routes>
        <Route exact path = "/"  element = {<Home />} />
        <Route exact path = '/shopping' element = {<Shopping 
-       onClick = {(e) => addItem(e)} 
+       onClick = {addItem} 
        items = {cart}
        />} />
        <Route exact path = "/cart" element ={<Cart
        items = {cart}
-       onClick = {(e) => addItem(e)}
+       onClick = {addItem}
        />} />
       </Routes>
      </Router>
