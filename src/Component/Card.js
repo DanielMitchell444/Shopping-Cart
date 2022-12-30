@@ -6,7 +6,7 @@ import Cart from "./Cart";
 
 
 
-const Card = (props, addItem) => {
+const Card = (props) => {
   
     const [showResults, setShowResults] = useState();
 
@@ -18,7 +18,7 @@ const Card = (props, addItem) => {
      <p>{props.id}</p>
      <p></p>
      <button
-     onClick={addItem}
+     onClick={props.addItem}
      data-value = {props.id}
      >Add To Cart</button>
      {showResults ? <Card /> : null}

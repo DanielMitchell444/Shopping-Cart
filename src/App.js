@@ -50,7 +50,7 @@ function App() {
        />} />
        <Route exact path = "/cart" element ={<Cart
        items = {cart}
-       onClick = {addItem}
+       addItem = {addItem}
        />} />
       </Routes>
      </Router>
