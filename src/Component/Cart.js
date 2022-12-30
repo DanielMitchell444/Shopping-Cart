@@ -6,9 +6,9 @@ import Shopping from "./Shopping";
 const Cart = (props) => {
  return(
  <div>
-    {props.items.map(item => {
+    {props.items.map(card => {
      return <Card 
-     item = {item.name}
+     item = {card}
      />
     })}  
  </div>

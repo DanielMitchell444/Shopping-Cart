@@ -20,7 +20,7 @@ function App() {
 
     let list = [...cart];
 
-    let newArray = data.findIndex((index => index.id === product.id));
+    let newArray = data.findIndex((index => index.id === product));
 
 
 
@@ -45,7 +45,7 @@ function App() {
       <Routes>
        <Route exact path = "/"  element = {<Home />} />
        <Route exact path = '/shopping' element = {<Shopping 
-       onClick = {addItem} 
+       addItem = {addItem} 
        items = {cart}
        />} />
        <Route exact path = "/cart" element ={<Cart
