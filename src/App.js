@@ -7,6 +7,7 @@ import Home from './Component/Home';
 import Shopping from './Component/Shopping';
 import data from './Component/data';
 import Cart from './Component/Cart';
+import Card from './Component/Card';
 
 function App() {
   

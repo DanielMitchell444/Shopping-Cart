@@ -3,12 +3,12 @@ import { json } from "react-router-dom";
 import Card from "./Card";
 import Shopping from "./Shopping";
 
-const Cart = ({items}) => {
+const Cart = (props) => {
  return(
  <div>
-    {items.map(item => {
+    {props.items.map(item => {
      return <Card 
-     item = {item}
+     items = {item}
      />
     })}  
  </div>
