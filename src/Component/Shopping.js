@@ -20,7 +20,8 @@ const Shopping = (props) => {
        id = {card.id}
        data-value = {card.id}
        card = {card}
-       onClick = {props.addItem}
+       addItem = { () => props.addItem(card)}
+       removeItem = {() => props.removeItem(card)}
        />
       })}
     </div>

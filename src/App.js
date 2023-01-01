@@ -34,6 +34,17 @@ function App() {
     }
     
   }
+
+  const removeItem = (product) => {
+   
+  let removedItem = cart.filter(index => index.id !== product.id);
+  
+  if(removedItem){
+  
+  setCart([product])
+   console.log('this works')
+  }
+}
   
 
 
@@ -46,11 +57,13 @@ function App() {
        <Route exact path = "/"  element = {<Home />} />
        <Route exact path = '/shopping' element = {<Shopping 
        addItem = {addItem} 
+       removeItem = {removeItem}
        items = {cart}
        />} />
        <Route exact path = "/cart" element ={<Cart
        items = {cart}
        addItem = {addItem}
+       removeItem = {removeItem}
        />} />
       </Routes>
      </Router>

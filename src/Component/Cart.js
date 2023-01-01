@@ -4,13 +4,22 @@ import Card from "./Card";
 import Shopping from "./Shopping";
 
 const Cart = (props) => {
+ 
+   const [results, showResults] = ('')
+
  return(
  <div>
     {props.items.map(card => {
      return <Card 
-     item = {card}
+     title = {card.name}
+     image = {card.image}
+     price = {card.price}
+     key = {card.id}
+     onClick = {card.removeItem}
+     
+     
      />
-    })}  
+    })} 
  </div>
  )
 }
