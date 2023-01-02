@@ -8,6 +8,7 @@ import Shopping from './Component/Shopping';
 import data from './Component/data';
 import Cart from './Component/Cart';
 import Card from './Component/Card';
+import CartItems from './Component/CartItems';
 
 function App() {
   
@@ -67,6 +68,11 @@ function App() {
        removeItem = {removeItem}
        quantity = {count}
        />} />
+       <Route exact path = "/cart" element = {<CartItems 
+       removeItem = {removeItem}
+       />}
+          
+       />
       </Routes>
      </Router>
      </div>

@@ -30,7 +30,7 @@ const decrementNumber = () => {
     title = {card.name}
     image = {card.image}
     price = {card.price}
-    onClick = {props.onClick}
+    onClick = {props.removeItem}
     />  
    })}
     <div>   
