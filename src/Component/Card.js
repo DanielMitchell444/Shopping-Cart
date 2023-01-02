@@ -8,7 +8,7 @@ import Cart from "./Cart";
 
 const Card = (props) => {
   
-    const [showResults, setShowResults] = useState('abc');
+    const [showResults, setShowResults] = useState('');
 
     return(
     <div className= {styles.card}>
@@ -16,15 +16,10 @@ const Card = (props) => {
      <h2>{props.title}</h2>
      <p>{props.price}</p>
      <p>{props.id}</p>
-     <p></p>
      <button
      onClick={props.addItem}
      data-value = {props.id}
      >Add To Cart</button>
-     <button
-     onClick = {props.removeItem}
-     >  
-     </button>
     </div>
     )
 }

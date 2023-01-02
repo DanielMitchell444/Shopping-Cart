@@ -14,13 +14,15 @@ function App() {
   
   const [cardArray, setCardArray] = useState(data);
   const [cart, setCart] = useState([]);
+  const [total, setTotal] = useState(0);
+  const [count, setCount] = useState(0)
 
   const addItem = (product) => {
     
 
     let list = [...cart];
 
-    let newArray = data.findIndex((index => index.id === product));
+    let newArray = data.filter((index => index.id === product));
 
 
 
@@ -30,6 +32,8 @@ function App() {
 
      setCart([...cart, product])
 
+     setCount(count + 1);
+
       console.log(setCart)
     }
     
@@ -37,15 +41,11 @@ function App() {
 
   const removeItem = (product) => {
    
-  let removedItem = cart.filter(index => index.id !== product.id);
   
-  if(removedItem){
-  
-  setCart([product])
-   console.log('this works')
-  }
+   setCart(cart.filter(a => a.id !== product.id))
+   console.log('this works');;
 }
-  
+
 
 
   return (
@@ -64,6 +64,7 @@ function App() {
        items = {cart}
        addItem = {addItem}
        removeItem = {removeItem}
+       quantity = {count}
        />} />
       </Routes>
      </Router>
