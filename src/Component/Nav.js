@@ -1,17 +1,19 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import styles from '../App.module.css'
 
 const Nav = () => {
  return(
  <nav>
- <div>
-<li>
+  <h3>Shopping Site</h3>
+ <div className= {styles.list}>
+<li className= {styles.list}>
   <Link to = "/">Home</Link>
 </li>
-<li>
+<li className= {styles.list}>
 <Link to = "/shopping">Shopping</Link>
 </li>
-<li>
+<li className= {styles.list}>
  <Link to = "/cart">Cart</Link>
 </li>
  </div>

@@ -1,23 +1,38 @@
 body{
-  background-color: #DACBB4;
+  background-color: rgb(255, 255, 255);
 }
 
 nav{
- background-color: black;
+ background-color: rgb(0, 0, 0);
  height: 100px;
  display: flex;
- justify-content: center;
+ justify-content: space-around;
  align-items: center;
 }
 
 li{
   display: inline-block;
   margin: 20px;
-  font-size: 36px;
+  color: white;
+  outline: none;
+  
+  text-decoration: none;
+  font-size: 30px;
+}
+
+.list{
+  text-decoration: none;
+  color: white;
 }
 
 h1{
   font-size: 48px;
+  text-align: center;
+}
+
+h3{
+ color: white;
+ font-size: 36px;
 }
 
 .content{
@@ -44,7 +59,7 @@ h1{
 
   img{
    width: 300px;
-   height: 300px;
+   height: 200px;
   }
 
 
@@ -72,4 +87,11 @@ display: none;
 .button2{
  width: 50px;
  height: 30px;
+}
+
+.display{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }

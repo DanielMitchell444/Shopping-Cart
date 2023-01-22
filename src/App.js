@@ -16,8 +16,7 @@ function App() {
   const [cardArray, setCardArray] = useState(data);
   const [cart, setCart] = useState([]);
   const [total, setTotal] = useState(0);
-  const [count, setCount] = useState(0)
-
+  const [count, setCount] = useState(0);
   const addItem = (product) => {
     
 
@@ -47,6 +46,25 @@ function App() {
    console.log('this works');;
 }
 
+const addTotal = () => {
+  let initialValue = 0;
+  const total = data.reduce((accumulator, current) => accumulator + current.price + current.price, initialValue);
+
+  setTotal(total) 
+}
+
+
+const incrementNumber = () => {
+    setCount((count) => count + 1 )
+  }
+  
+  const decrementNumber = () => {
+    setCount(count - 1); 
+  }
+
+
+    
+
 
 
 
@@ -67,9 +85,12 @@ function App() {
        addItem = {addItem}
        removeItem = {removeItem}
        quantity = {count}
+       total = {addTotal}
        />} />
        <Route exact path = "/cart" element = {<CartItems 
        removeItem = {removeItem}
+       total = {total}
+
        />}
           
        />
