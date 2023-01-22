@@ -18,11 +18,7 @@ const CartItems = (props) => {
         setCount(count - 1); 
       }
 
-      const addTotal = () => {
-        let initialValue = 0;
-        let prices = data.map(item => +item.price.slice(1)); 
-        setTotal( prices.reduce((accumulator, current) => accumulator + current, initialValue)); 
-       }
+    
         
 
 
@@ -43,6 +39,9 @@ const CartItems = (props) => {
      onClick={props.removeItem}
      data-value = {props.id}
      >Remove from cart</button>
+    <div>
+     {} 
+    </div>
     </div>
     
  ) 
