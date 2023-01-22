@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { json } from "react-router-dom";
 import Card from "./Card";
 import Shopping from "./Shopping";
@@ -18,9 +18,13 @@ const Cart = (props) => {
 
    const addTotal = () => {
     let prices= data.map(item => +item.price.slice(1)); 
-    const total = prices.reduce((accumulator, current) => accumulator + current.price, initialValue); 
+    total = prices.reduce((accumulator, current) => {return  accumulator + current}, initialValue); 
     setTotal(total);
    }
+
+   useEffect(() => {
+    setCount(count + 1)
+  })
 
 
   
@@ -40,7 +44,8 @@ const Cart = (props) => {
    })}
     </div>
     <div>
-   <h1>Total: {() => addTotal()}</h1>
+   <h1>Total: {total}</h1>
+   <h2>quantity: {count}</h2>
    </div> 
     </div>
  )

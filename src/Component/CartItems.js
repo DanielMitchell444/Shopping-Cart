@@ -11,7 +11,15 @@ const CartItems = (props) => {
     const [total, setTotal] = useState(0)
 
     const incrementNumber = () => {
+      if(count <= 4)
         setCount((count) => count + 1 )
+     else{ if(count >= -1){
+       setCount(count);
+     }
+      
+     }
+    
+    
       }
       
       const decrementNumber = () => {
