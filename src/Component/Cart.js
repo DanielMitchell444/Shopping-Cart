@@ -9,22 +9,11 @@ import data from "./data";
 const Cart = (props) => {
  
    const [results, showResults] = ('')
-
-   let initialValue = 0;
    
    const [count, setCount] = useState(1);
   
    const [total, setTotal] = useState(0)
 
-   const addTotal = () => {
-    let prices= data.map(item => +item.price.slice(1)); 
-    total = prices.reduce((accumulator, current) => {return  accumulator + current}, initialValue); 
-    setTotal(total);
-   }
-
-   useEffect(() => {
-    setCount(count + 1)
-  })
 
 
   

@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import styles from './App.module.css'
 import { BrowserRouter as Router, Switch, Route, Routes } from "react-router-dom";
 import Nav from './Component/Nav';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Home from './Component/Home';
 import Shopping from './Component/Shopping';
 import data from './Component/data';
@@ -17,11 +17,6 @@ function App() {
   const [cart, setCart] = useState([]);
   const [total, setTotal] = useState(0);
   const [count, setCount] = useState(0);
-  const addTotal = () => {
-    let prices= data.map(item => +item.price.slice(1)); 
-    total = prices.reduce((accumulator, current) => accumulator + current.price); 
-    setTotal(total);
-   }
   
   
   const addItem = (product) => {
@@ -45,6 +40,18 @@ function App() {
     }
     
   }
+
+
+  
+  const addTotal = () => {
+    let prices= data.map(item => +item.price.slice(1)); 
+    let totalValue = prices.reduce((accumulator, current) => accumulator + current.price); 
+    setTotal(totalValue)
+   }
+
+
+  
+
 
   const removeItem = (product) => {
    
