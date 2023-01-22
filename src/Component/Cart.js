@@ -17,11 +17,9 @@ const Cart = (props) => {
    const [total, setTotal] = useState(0)
 
    const addTotal = () => {
-    let initialValue = 0;
     let prices= data.map(item => +item.price.slice(1)); 
-    total = data.reduce((accumulator, current) => accumulator + current.price, initialValue); 
-    setTotal(total)
-    console.log(total);
+    const total = prices.reduce((accumulator, current) => accumulator + current.price, initialValue); 
+    setTotal(total);
    }
 
 
@@ -42,7 +40,7 @@ const Cart = (props) => {
    })}
     </div>
     <div>
-   <h1>Total: {data.reduce((accumulator, current) => accumulator + current.price, initialValue)}</h1>
+   <h1>Total: {() => addTotal()}</h1>
    </div> 
     </div>
  )
