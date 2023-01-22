@@ -2,10 +2,13 @@ import React from 'react'
 import Card from './Card'
 import styles from '../App.module.css';
 import { useState } from 'react';
+import data from './data';
 
 const CartItems = (props) => {
 
     const [count, setCount] = useState(1);
+    
+    const [total, setTotal] = useState(0)
 
     const incrementNumber = () => {
         setCount((count) => count + 1 )
@@ -14,6 +17,12 @@ const CartItems = (props) => {
       const decrementNumber = () => {
         setCount(count - 1); 
       }
+
+      const addTotal = () => {
+        let initialValue = 0;
+        let prices = data.map(item => +item.price.slice(1)); 
+        setTotal( prices.reduce((accumulator, current) => accumulator + current, initialValue)); 
+       }
         
 
 

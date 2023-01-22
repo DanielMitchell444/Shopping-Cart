@@ -12,21 +12,9 @@ const Cart = (props) => {
    
    const [count, setCount] = useState(1);
 
-   const [total, setTotal] = useState(1)
+   const [total, setTotal] = useState(80)
 
-   const addTotal = () => {
-     
-   let initialValue = 0;
-
-
-   setTotal(total);
-
-
-   const addTotal = () => {
-    let initialValue = 0;
-    setTotal( data.reduce((accumulator, current) => accumulator + current.price + current.price, initialValue)); 
-   }
-   }
+  
 
    
   
@@ -42,12 +30,12 @@ const Cart = (props) => {
     price = {card.price}
     removeItem = {() => props.removeItem(card)}
     incrementItem = {props.incrementItem}
-    total = {addTotal}
+    total = {() => props.addTotal}
     />  
    })}
     </div>
     <div>
-   <h1>Total: {addTotal}</h1>
+   <h1>Total: {}</h1>
    </div> 
     </div>
  )
