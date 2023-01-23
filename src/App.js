@@ -35,18 +35,15 @@ function App() {
      setCart([...cart, product])
 
      setCount(count + 1);
-      addTotal();
       console.log(setCart)
     }
     
   }
 
 
-  
-  const addTotal = () => { 
+
     let totalValue = data.reduce((accumulator, current) => accumulator + current.quantity * current.price); 
-    setTotal(totalValue)
-   }
+
 
 
   
@@ -95,7 +92,7 @@ const incrementNumber = () => {
        <Route exact path = "/cart" element = {<CartItems 
        removeItem = {removeItem}
        total = {total}
-       addTotal = {addTotal}
+       items = {totalValue}
 
        />}
           
