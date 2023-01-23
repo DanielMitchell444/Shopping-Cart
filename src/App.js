@@ -43,9 +43,8 @@ function App() {
 
 
   
-  const addTotal = () => {
-    let prices= data.map(item => +item.price.slice(1)); 
-    let totalValue = prices.reduce((accumulator, current) => accumulator + current.price); 
+  const addTotal = () => { 
+    let totalValue = data.reduce((accumulator, current) => accumulator + current.quantity * current.price); 
     setTotal(totalValue)
    }
 
@@ -96,6 +95,7 @@ const incrementNumber = () => {
        <Route exact path = "/cart" element = {<CartItems 
        removeItem = {removeItem}
        total = {total}
+       addTotal = {addTotal}
 
        />}
           

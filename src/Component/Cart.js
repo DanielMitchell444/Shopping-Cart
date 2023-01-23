@@ -11,10 +11,13 @@ const Cart = (props) => {
    const [results, showResults] = ('')
    
    const [count, setCount] = useState(1);
+
+
+
+   const addTotal = () => { 
+    
   
-   const [total, setTotal] = useState(0)
-
-
+   }
 
   
      
@@ -33,8 +36,8 @@ const Cart = (props) => {
    })}
     </div>
     <div>
-   <h1>Total: {total}</h1>
-   <h2>quantity: {count}</h2>
+   <h1>Total: {props.total}</h1>
+   <h2>quantitpy: {data.reduce((accumulator, current) => accumulator + current.quantity * current.price)}</h2>
    </div> 
     </div>
  )
