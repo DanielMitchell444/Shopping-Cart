@@ -5,16 +5,15 @@ import styles from '../App.module.css'
 const Nav = () => {
  return(
  <nav>
-  <h3>Shopping Site</h3>
  <div className= {styles.list}>
 <li className= {styles.list}>
-  <Link to = "/">Home</Link>
+  <Link className= {styles.list} to = "/">Home</Link>
 </li>
 <li className= {styles.list}>
-<Link to = "/shopping">Shopping</Link>
+<Link className= {styles.list} to = "/shopping">Shopping</Link>
 </li>
 <li className= {styles.list}>
- <Link to = "/cart">Cart</Link>
+ <Link className= {styles.list} to = "/cart">Cart</Link>
 </li>
  </div>
  </nav>

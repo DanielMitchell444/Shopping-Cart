@@ -36,8 +36,8 @@ const Cart = (props) => {
    })}
     </div>
     <div>
+    <hr></hr>
    <h1>Total: {props.items.reduce((accumulator, current) => accumulator + current.quantity * current.price, 0)}</h1>
-   <h2>quantitpy: {}</h2>
    </div> 
     </div>
  )

@@ -41,11 +41,6 @@ function App() {
   }
 
 
-
-    let totalValue = data.reduce((accumulator, current) => accumulator + current.quantity * current.price); 
-
-
-
   
 
 
@@ -92,7 +87,7 @@ const incrementNumber = () => {
        <Route exact path = "/cart" element = {<CartItems 
        removeItem = {removeItem}
        total = {total}
-       items = {totalValue}
+       items = {cart}
 
        />}
           

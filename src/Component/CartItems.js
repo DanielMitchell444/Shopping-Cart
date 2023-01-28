@@ -9,40 +9,16 @@ const CartItems = (props) => {
     const [count, setCount] = useState(1);
     
     const [total, setTotal] = useState(0)
-
-    const incrementNumber = () => {
-      if(count <= 4)
-        setCount((count) => count + 1 )
-     else{ if(count >= -1){
-       setCount(count);
-     }
-      
-     }
-    
-    
-      }
-      
-      const decrementNumber = () => {
-        setCount(count - 1); 
-      }
-
-    
         
 
 
  return(
-  <div className= {styles.card}>
+  <div className= {styles.card2}>
      <img src = {props.image} />
      <h2>{props.title}</h2>
-     <p>{props.price}</p>
+     <p>${props.price}</p>
      <p>{props.id}</p>
-     <button className= {styles.button2}
-     onClick = {decrementNumber}
-     >-</button>
      <span>{count}</span>
-     <button className = {styles.button2}
-     onClick = {incrementNumber}
-     >+</button>
      <button
      onClick={props.removeItem}
      data-value = {props.id}
