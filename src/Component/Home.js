@@ -5,9 +5,8 @@ const Home = () => {
     <main className = {styles.class}>
      <div className= {styles.content}>
       <div className= {styles.content56}>
-      <div>Welcome to the dewberts</div>
-      <div>Shopping is made easy with dewburts</div>
-      <img src = "https://i.postimg.cc/yN6M0h3x/istockphoto-947749242-612x612.jpg" />
+      <h1>Welcome to the Dewberts</h1>
+      <p>Shopping is made easy with Dewberts</p>
      </div>
      </div>
     </main>
